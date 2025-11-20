@@ -28,7 +28,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'dashboard') ? 'active' : '' }} ">
-              <i class="fas fa-home"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
               </p>
@@ -56,7 +56,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'jadwal') ? 'active' : '' }} ">
-              <i class="fas fa-clock"></i>
+              <i class="nav-icon fas fa-clock"></i>
               <p>
                 Daftar Jadwal
               </p>
@@ -64,7 +64,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'ruangan') ? 'active' : '' }} ">
-              <i class="fas fa-door-open"></i>
+              <i class="nav-icon fas fa-door-open"></i>
               <p>
                 Daftar Ruangan
               </p>
@@ -72,34 +72,34 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link {{ $activeMenu == 'user' ? 'active' : '' }}">
-              <i class="fas fa-users"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Daftar Pengguna
-                <i class="fas fa-angle-down"></i>
+                <i class="nav-icon fas fa-angle-down"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ url('/admin') }}" class="nav-link {{ $activeMenu == 'admin' ? 'active' : '' }}">
-                  <i class="fas fa-user"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Admin</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('/dosen') }}" class="nav-link {{ $activeMenu == 'dosen' ? 'active' : '' }}">
-                  <i class="fas fa-user"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Dosen</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('/tendik') }}" class="nav-link {{ $activeMenu == 'tendik' ? 'active' : '' }}">
-                  <i class="fas fa-user"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Tendik</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('/mahasiswa') }}" class="nav-link {{ $activeMenu == 'mahasiswa' ? 'active' : '' }}">
-                  <i class="fas fa-user"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Mahasiswa</p>
                 </a>
               </li>
@@ -107,7 +107,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ url('/prodi') }}" class="nav-link {{ $activeMenu == 'prodi' ? 'active' : '' }}">
-              <i class="fas fa-swatchbook"></i>
+              <i class="nav-icon fas fa-swatchbook"></i>
               <p>
                 Daftar Program Studi
               </p>
@@ -115,7 +115,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ url('/kelas') }}" class="nav-link {{ $activeMenu == 'kelas' ? 'active' : '' }}">
-              <i class="fas fa-book"></i>
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Daftar Kelas
               </p>
