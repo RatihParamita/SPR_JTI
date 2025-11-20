@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Path Test</title>
+
+    <!-- Inline Style Test -->
+    <style>
+        body {
+            background-color: #e0ffe0;
+            /* Light Green */
+        }
+
+        .inline-test {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- External CSS Test 1: Simple CSS -->
+    <link rel="stylesheet" href="simple.css?v=9999">
+
+    <!-- External CSS Test 2: AdminLTE -->
+    <link rel="stylesheet" href="adminlte/dist/css/adminlte.min.css?v=9999">
+</head>
+
+<body>
+    <div style="padding: 20px;">
+        <h1>CSS Loading Test</h1>
+
+        <div class="card card-primary"
+            style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; background: white;">
+            <div class="card-header">
+                <h3 class="card-title">Status Box</h3>
+            </div>
+            <div class="card-body">
+                <p class="inline-test">1. Inline Styles: If this text is GREEN, inline styles work.</p>
+
+                <p>2. Simple CSS: If the page background is RED (or overridden), simple.css loaded.</p>
+
+                <p>3. AdminLTE: If this box has a BLUE header bar, AdminLTE loaded.</p>
+            </div>
+        </div>
+
+        <p>Links being tested:</p>
+        <ul>
+            <li><a href="simple.css">simple.css</a></li>
+            <li><a href="adminlte/dist/css/adminlte.min.css">adminlte/dist/css/adminlte.min.css</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
