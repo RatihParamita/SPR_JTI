@@ -55,7 +55,7 @@
             </ul-->
           </li>
           <li class="nav-item">
-            <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'jadwal') ? 'active' : '' }} ">
+            <a href="{{ url('/jadwal') }}" class="nav-link {{ ($activeMenu == 'jadwal') ? 'active' : '' }} ">
               <i class="nav-icon fas fa-clock"></i>
               <p>
                 Daftar Jadwal
@@ -63,7 +63,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'ruangan') ? 'active' : '' }} ">
+            <a href="{{ url('/ruangan') }}" class="nav-link {{ ($activeMenu == 'ruangan') ? 'active' : '' }} ">
               <i class="nav-icon fas fa-door-open"></i>
               <p>
                 Daftar Ruangan

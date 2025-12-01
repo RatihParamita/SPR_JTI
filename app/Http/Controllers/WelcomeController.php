@@ -9,7 +9,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $breadcrumb = (object) [
-            'title' => 'Selamat datang!',
+            'title' => 'Selamat Datang!',
             'list' => ['Home', 'Dashboard']
         ];
 
