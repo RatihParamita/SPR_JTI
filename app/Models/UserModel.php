@@ -38,19 +38,22 @@ class UserModel extends Authenticatable implements JWTSubject
     //mendapatkan nama role
     public function getRoleName(): string
     {
-        return $this->level->level_nama;
+        // Menggunakan optional() agar aman jika relasi level bernilai null
+        return optional($this->level)->level_nama ?? '';
     }
-
+    
     //cek apakah user memiliki kode tertentu
     public function hasRole($role): bool
     {
-        return $this->level->level_kode == $role;
+        // Menggunakan optional() agar aman jika relasi level bernilai null
+        return optional($this->level)->level_kode == $role;
     }
-
+    
     //mendapatkan kode role
     public function getRole(): string
     {
-        return $this->level->level_kode;
+        // Menggunakan optional() agar aman jika relasi level bernilai null. Mengembalikan string kosong jika level tidak ada.
+        return optional($this->level)->level_kode ?? '';
     }
 
     public function admin()
