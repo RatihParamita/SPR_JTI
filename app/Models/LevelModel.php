@@ -11,4 +11,9 @@ class LevelModel extends Model
     protected $table= 'm_level'; //mendefinisikan nama tabel yang akan digunakan
     protected $primaryKey = 'level_id';
     protected $fillable = ['level_kode','level_nama'];
+
+    public function users()
+    {
+        return $this->hasMany(UserModel::class, 'level_id', 'level_id');
+    }
 }
