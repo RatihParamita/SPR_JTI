@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title', 'Sistem Peminjaman Ruangan')</title>
 
+  <meta name="csrf-token" content="{{csrf_token()}}"> <!--Script untuk mengirimkan token csrf setiap kali request ajax-->
+
   <style>
         /* CSS Kustom Anda */
         #page-title {
@@ -75,6 +77,8 @@
   <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css')}}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   @stack('css')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
@@ -128,5 +132,6 @@
 <script src="{{ asset('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('adminlte/dist/js/adminlte.js?v=3.2.0') }}"></script>
+@stack('js')
 </body>
 </html>
