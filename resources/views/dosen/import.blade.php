@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label>Pilih File Excel:</label>
-                <input type="file" class="form-control" id="file_dosen" name="file_dosen" required>
+                <input type="file" class="form-control" style="padding: 0px 0px 0px 0px; height: 32px;" id="file_dosen" name="file_dosen" required>
                 <small id="error_file_dosen" class="form-text text-danger"></small>
             </div>
         </div>
