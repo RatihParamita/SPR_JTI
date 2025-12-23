@@ -58,7 +58,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" id="password" name="password" value="">
+                        <input type="password" class="form-control" id="password" name="password" value="" placeholder="Kosongkan jika tidak ingin mengubah password">
                         <small id="error-password" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
