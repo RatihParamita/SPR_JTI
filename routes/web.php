@@ -136,6 +136,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/import', [MahasiswaController::class, 'import']); //import excel
         Route::post('/import_ajax', [MahasiswaController::class, 'import_ajax']); //import excel dengan ajax
+        Route::get('/get_kelas_by_prodi/{prodi_id}', [MahasiswaController::class, 'get_kelas_by_prodi']); // Get Kelas by Prodi
     });
 
     Route::group(['prefix' => 'prodi', 'middleware' => 'authorize:ADM'], function () {
