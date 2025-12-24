@@ -4,11 +4,12 @@
 
 <div class = "card">
     <div class = "card-header">
-        <h3 class = "card-title">Dashboard</h3>
+        <h3 class = "card-title" style="font-weight: bold;">Dashboard</h3>
         <div class = "card-tools"></div>
     </div>
     <div class = "card-body">
-        Rencananya akan dikasih daftar tugas terbuat, daftar request, daftar tugas yang dimanage dan statusnya.
+        Rencananya akan dikasih stat card total ruangan, total jadwal pada hari terkini, total ruangan kosong, dan total pengguna aktif.
+        <br>Lalu di bawahnya diberi grafik top 5 ruangan terfavorit, distribusi status peminjam, dan tren peminjaman selama 6 bulan.
     </div>
 </div>
 @endsection
