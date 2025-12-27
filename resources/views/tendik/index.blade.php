@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-<div class="card card-outline card-primary">
+<div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <div class="card-header">
         {{-- <h3 class="card-title">{{ $page->title }}</h3> --}}
         <div class="d-flex align-items-center w-100">
