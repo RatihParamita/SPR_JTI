@@ -63,7 +63,7 @@
                 <tr>
                     <td>{{ $key + 1 }}.</td>
                     <td>{{ $tendik->tendik_nidn }}</td>
-                    <td>{{ $tendik->tendik_nama }}</td>
+                    <td>{{ Str::limit($tendik->tendik_nama, 50, '...') }}</td>
                     <td>{{ $tendik->tendik_noHp }}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Aksi">

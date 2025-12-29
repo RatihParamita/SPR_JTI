@@ -75,7 +75,7 @@
                 <tr>
                     <td>{{ $key + 1 }}.</td>
                     <td>{{ $mahasiswa->mahasiswa_nim }}</td>
-                    <td>{{ $mahasiswa->mahasiswa_nama }}</td>
+                    <td>{{ Str::limit($mahasiswa->mahasiswa_nama, 50, '...') }}</td>
                     <td>{{ $mahasiswa->prodi ? $mahasiswa->prodi->prodi_kode : '-' }}</td>
                     <td>{{ $mahasiswa->kelas ? $mahasiswa->kelas->kelas_nama : '-' }}</td>
                     <td>{{ $mahasiswa->mahasiswa_noHp }}</td>

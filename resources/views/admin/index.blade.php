@@ -71,7 +71,7 @@
                 <tr>
                     <td>{{ $key + 1 }}.</td>
                     <td>{{ $admin->admin_nidn }}</td>
-                    <td>{{ $admin->admin_nama }}</td>
+                    <td>{{ Str::limit($admin->admin_nama, 50, '...') }}</td>
                     <td>{{ $admin->prodi ? $admin->prodi->prodi_kode : '-' }}</td>
                     <td>{{ $admin->admin_noHp }}</td>
                     <td>

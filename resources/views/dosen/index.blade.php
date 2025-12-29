@@ -74,7 +74,7 @@
                 <tr>
                     <td>{{ $key + 1 }}.</td>
                     <td>{{ $dosen->dosen_nidn }}</td>
-                    <td>{{ $dosen->dosen_nama }}</td>
+                    <td>{{ Str::limit($dosen->dosen_nama, 50, '...') }}</td>
                     <td>{{ $dosen->prodi ? $dosen->prodi->prodi_kode : '-' }}</td>
                     <td>{{ $dosen->dosen_noHp }}</td>
                     <td>

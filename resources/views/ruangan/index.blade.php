@@ -49,9 +49,9 @@
                 @foreach($ruangan as $key => $r)
                 <tr>
                     <td>{{ $key + 1 }}</td>
-                    <td>{{ $r->ruangan_nama }}</td>
+                    <td>{{ Str::limit($r->ruangan_nama, 30, '...') }}</td>
                     <td>{{ $r->ruangan_kode }}</td>
-                    <td>{{ $r->ruangan_fasilitas }}</td>
+                    <td>{{ Str::limit($r->ruangan_fasilitas, 50, '...') }}</td>
                     <td>{{ $r->ruangan_kuota }}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Aksi">
