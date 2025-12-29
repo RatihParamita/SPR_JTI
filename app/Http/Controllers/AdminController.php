@@ -242,7 +242,7 @@ class AdminController extends Controller
         $admin = AdminModel::with(['user', 'prodi'])->find($id);
 
         if (!$admin) {
-            abort(404, 'Data Admin tidak ditemukan.');
+            abort(404, 'Data admin tidak ditemukan!');
         }
 
         return view('admin.show_ajax', compact('admin'));
@@ -254,7 +254,7 @@ class AdminController extends Controller
         $prodiList = ProdiModel::all(); // Ambil semua data prodi untuk dropdown
 
         if (!$admin) {
-            abort(404, 'Data Admin tidak ditemukan.');
+            abort(404, 'Data admin tidak ditemukan!');
         }
 
         return view('admin.edit_ajax', compact('admin', 'prodiList'));
@@ -266,7 +266,7 @@ class AdminController extends Controller
             $admin = AdminModel::find($id);
 
             if (!$admin) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data admin tidak ditemukan!'], 404);
             }
 
             // Validasi: Pastikan username unik kecuali untuk user yang sedang diedit
@@ -333,7 +333,7 @@ class AdminController extends Controller
         $admin = AdminModel::with('user', 'prodi')->find($id);
 
         if (!$admin) {
-            return response()->json(['status' => false, 'message' => 'Data admin tidak ditemukan'], 404);
+            return response()->json(['status' => false, 'message' => 'Data admin tidak ditemukan!'], 404);
         }
 
         return view('admin.confirm_ajax', compact('admin'));

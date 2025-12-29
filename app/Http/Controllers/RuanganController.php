@@ -159,7 +159,7 @@ class RuanganController extends Controller
             $ruangan = RuanganModel::find($id);
 
             if (!$ruangan) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data ruangan tidak ditemukan!'], 404);
             }
 
             return view('ruangan.show_ajax', compact('ruangan'));
@@ -173,7 +173,7 @@ class RuanganController extends Controller
             $ruangan = RuanganModel::find($id);
 
             if (!$ruangan) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data ruangan tidak ditemukan!'], 404);
             }
 
             return view('ruangan.edit_ajax', compact('ruangan'));
@@ -204,7 +204,7 @@ class RuanganController extends Controller
             $ruangan = RuanganModel::find($id);
 
             if (!$ruangan) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data ruangan tidak ditemukan!'], 404);
             }
 
             try {
@@ -236,7 +236,7 @@ class RuanganController extends Controller
             $ruangan = RuanganModel::find($id);
 
             if (!$ruangan) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data ruangan tidak ditemukan!'], 404);
             }
 
             return view('ruangan.confirm_ajax', compact('ruangan'));
@@ -250,7 +250,7 @@ class RuanganController extends Controller
             $ruangan = RuanganModel::find($id);
 
             if (!$ruangan) {
-                 return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                 return response()->json(['status' => false, 'message' => 'Data ruangan tidak ditemukan!'], 404);
             }
 
             try {

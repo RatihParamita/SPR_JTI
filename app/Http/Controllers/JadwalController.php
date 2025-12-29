@@ -125,7 +125,7 @@ class JadwalController extends Controller
             $jadwal = JadwalModel::with(['user.level', 'user.mahasiswa.prodi', 'user.mahasiswa.kelas', 'ruangans'])->find($id);
 
             if (!$jadwal) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
             }
 
             return view('jadwal.show_ajax', compact('jadwal'));
@@ -146,7 +146,7 @@ class JadwalController extends Controller
             $kelasList = KelasModel::all();
 
             if (!$jadwal) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
             }
 
             return view('jadwal.edit_ajax', compact('jadwal', 'userList', 'ruanganList', 'levelList', 'prodiList', 'kelasList'));
@@ -181,7 +181,7 @@ class JadwalController extends Controller
             $jadwal = JadwalModel::find($id);
 
             if (!$jadwal) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
             }
 
             try {
@@ -218,7 +218,7 @@ class JadwalController extends Controller
         $jadwal = JadwalModel::with('user', 'ruangans')->find($id);
 
         if (!$jadwal) {
-            return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan'], 404);
+            return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
         }
 
         return view('jadwal.confirm_ajax', compact('jadwal'));
@@ -226,7 +226,7 @@ class JadwalController extends Controller
             $jadwal = JadwalModel::find($id);
 
             if (!$jadwal) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
             }
 
             return view('jadwal.confirm_ajax', compact('jadwal'));
@@ -240,7 +240,7 @@ class JadwalController extends Controller
             $jadwal = JadwalModel::find($id);
 
             if (!$jadwal) {
-                 return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                 return response()->json(['status' => false, 'message' => 'Data jadwal tidak ditemukan!'], 404);
             }
 
             try {

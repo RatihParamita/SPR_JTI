@@ -240,7 +240,7 @@ class TendikController extends Controller
             $tendik = TendikModel::with(['user'])->find($id);
 
             /*if (!$tendik) {
-                abort(404, 'Data Tendik tidak ditemukan.');
+                abort(404, 'Data tendik tidak ditemukan!');
             }*/
 
             return view('tendik.show_ajax', compact('tendik'));
@@ -255,7 +255,7 @@ class TendikController extends Controller
             //$prodiList = ProdiModel::all(); // Ambil semua data prodi untuk dropdown
 
             if (!$tendik) {
-                abort(404, 'Data Tendik tidak ditemukan.');
+                abort(404, 'Data tendik tidak ditemukan!');
             }
 
             return view('tendik.edit_ajax', compact('tendik'));
@@ -269,7 +269,7 @@ class TendikController extends Controller
             $tendik = TendikModel::find($id);
 
             if (!$tendik) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data tendik tidak ditemukan!'], 404);
             }
 
             // Validasi: Pastikan username unik kecuali untuk user yang sedang diedit
@@ -335,7 +335,7 @@ class TendikController extends Controller
             $tendik = TendikModel::with('user')->find($id);
 
             if (!$tendik) {
-                return response()->json(['status' => false, 'message' => 'Data tendik tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data tendik tidak ditemukan!'], 404);
             }
 
             return view('tendik.confirm_ajax', compact('tendik'));

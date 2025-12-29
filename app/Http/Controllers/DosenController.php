@@ -244,7 +244,7 @@ class DosenController extends Controller
             $dosen = DosenModel::with(['user', 'prodi'])->find($id);
 
             if (!$dosen) {
-                abort(404, 'Data Dosen tidak ditemukan.');
+                abort(404, 'Data dosen tidak ditemukan!');
             }
 
             return view('dosen.show_ajax', compact('dosen'));
@@ -259,7 +259,7 @@ class DosenController extends Controller
             $prodiList = ProdiModel::all(); // Ambil semua data prodi untuk dropdown
 
             if (!$dosen) {
-                abort(404, 'Data Dosen tidak ditemukan.');
+                abort(404, 'Data dosen tidak ditemukan!');
             }
 
             return view('dosen.edit_ajax', compact('dosen', 'prodiList'));
@@ -273,7 +273,7 @@ class DosenController extends Controller
             $dosen = DosenModel::find($id);
 
             if (!$dosen) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data dosen tidak ditemukan!'], 404);
             }
 
             // Validasi: Pastikan username unik kecuali untuk user yang sedang diedit
@@ -341,7 +341,7 @@ class DosenController extends Controller
             $dosen = DosenModel::with('user', 'prodi')->find($id);
 
             if (!$dosen) {
-                return response()->json(['status' => false, 'message' => 'Data dosen tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data dosen tidak ditemukan!'], 404);
             }
 
             return view('dosen.confirm_ajax', compact('dosen'));

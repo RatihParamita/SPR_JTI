@@ -154,7 +154,7 @@ class ProdiController extends Controller
             $prodi = ProdiModel::find($id);
 
             if (!$prodi) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data program studi tidak ditemukan!'], 404);
             }
 
             return view('prodi.show_ajax', compact('prodi'));
@@ -168,7 +168,7 @@ class ProdiController extends Controller
             $prodi = ProdiModel::find($id);
 
             if (!$prodi) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data program studi tidak ditemukan!'], 404);
             }
 
             return view('prodi.edit_ajax', compact('prodi'));
@@ -197,7 +197,7 @@ class ProdiController extends Controller
             $prodi = ProdiModel::find($id);
 
             if (!$prodi) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data program studi tidak ditemukan!'], 404);
             }
 
             try {
@@ -227,7 +227,7 @@ class ProdiController extends Controller
             $prodi = ProdiModel::find($id);
 
             if (!$prodi) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data program studi tidak ditemukan!'], 404);
             }
 
             return view('prodi.confirm_ajax', compact('prodi'));
@@ -241,7 +241,7 @@ class ProdiController extends Controller
             $prodi = ProdiModel::find($id);
 
             if (!$prodi) {
-                 return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                 return response()->json(['status' => false, 'message' => 'Data program studi tidak ditemukan!'], 404);
             }
 
             try {

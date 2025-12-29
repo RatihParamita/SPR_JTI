@@ -182,7 +182,7 @@ class MahasiswaController extends Controller
             $mahasiswa = MahasiswaModel::with(['user', 'prodi', 'kelas'])->find($id);
 
             if (!$mahasiswa) {
-                abort(404, 'Data Mahasiswa tidak ditemukan.');
+                abort(404, 'Data mahasiswa tidak ditemukan!');
             }
 
             return view('mahasiswa.show_ajax', compact('mahasiswa'));
@@ -198,7 +198,7 @@ class MahasiswaController extends Controller
             $kelasList = KelasModel::all(); // Ambil semua data kelas untuk dropdown
 
             if (!$mahasiswa) {
-                abort(404, 'Data Mahasiswa tidak ditemukan.');
+                abort(404, 'Data Mahasiswa tidak ditemukan!');
             }
 
             return view('mahasiswa.edit_ajax', compact('mahasiswa', 'prodiList', 'kelasList'));
@@ -212,7 +212,7 @@ class MahasiswaController extends Controller
             $mahasiswa = MahasiswaModel::find($id);
 
             if (!$mahasiswa) {
-                return response()->json(['status' => false, 'message' => 'Data tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data mahasiswa tidak ditemukan!'], 404);
             }
 
             // Validasi: Pastikan username unik kecuali untuk user yang sedang diedit
@@ -282,7 +282,7 @@ class MahasiswaController extends Controller
             $mahasiswa = MahasiswaModel::with('user', 'prodi', 'kelas')->find($id);
 
             if (!$mahasiswa) {
-                return response()->json(['status' => false, 'message' => 'Data mahasiswa tidak ditemukan'], 404);
+                return response()->json(['status' => false, 'message' => 'Data mahasiswa tidak ditemukan!'], 404);
             }
 
             return view('mahasiswa.confirm_ajax', compact('mahasiswa'));
