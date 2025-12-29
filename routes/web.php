@@ -43,7 +43,9 @@ Route::middleware(['auth'])->group(function () {
         Route::put('/{id}/update_ajax', [JadwalController::class, 'update_ajax']); //menyimpan perubahan data dengan ajax
 
         Route::get('/{id}/confirm_ajax', [JadwalController::class, 'confirm_ajax']); //Munculkan pop up konfirmasi delete dengan ajax
+        Route::get('/{id}/confirm_ajax', [JadwalController::class, 'confirm_ajax']); //Munculkan pop up konfirmasi delete dengan ajax
         Route::delete('/{id}/delete_ajax', [JadwalController::class, 'delete_ajax']); //Menghapus data jadwal dengan ajax
+        Route::get('/get_kelas_by_prodi/{prodi_id}', [JadwalController::class, 'get_kelas_by_prodi']); // Get Kelas by Prodi
     });
 
     Route::group(['prefix' => 'ruangan', 'middleware' => 'authorize:ADM'], function () {
