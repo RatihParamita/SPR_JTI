@@ -130,6 +130,9 @@
             autoWidth: false,
             responsive: true,
             dom: 'rtip', // Hide default search (f) and length (l), keep table (t), info (i), pagination (p)
+            columnDefs: [
+                { orderable: false, targets: 5 }
+            ],
         });
         
         console.log("DataTable initialized:", dataRuangan); // DEBUG

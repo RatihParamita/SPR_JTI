@@ -167,8 +167,8 @@
             responsive: true,
             dom: 'rtip', // Hide default search (f) and length (l), keep table (t), info (i), pagination (p)
             columnDefs: [
-                { orderable: false, targets: [0, 5] }, // Disable sort on No and Aksi
-                { searchable: false, targets: [0, 5] }
+                { orderable: false, targets: [0, 6] }, // Disable sort on No and Aksi
+                { searchable: false, targets: [0, 6] }
             ]
         });
         

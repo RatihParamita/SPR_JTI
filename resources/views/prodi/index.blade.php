@@ -126,6 +126,9 @@
             autoWidth: false,
             responsive: true,
             dom: 'rtip', // Hide default search (f) and length (l), keep table (t), info (i), pagination (p)
+            columnDefs: [
+                { orderable: false, targets: 3 }
+            ],
         });
         
         console.log("DataTable initialized:", dataProdi); // DEBUG
