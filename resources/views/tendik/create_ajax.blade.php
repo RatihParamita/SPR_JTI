@@ -14,7 +14,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="tendik_nidn">NIDN</label>
-                        <input type="text" class="form-control" id="tendik_nidn" name="tendik_nidn" required>
+                        <input type="text" class="form-control" id="tendik_nidn" name="tendik_nidn" placeholder="NIDN Tendik" required>
                         <small id="error_tendik_nidn" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="tendik_noHp">No. HP</label>
-                        <input type="text" class="form-control" id="tendik_noHp" name="tendik_noHp" required>
+                        <input type="text" class="form-control" id="tendik_noHp" name="tendik_noHp" placeholder="Nomor Handphone Tendik" required>
                         <small id="error_tendik_noHp" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="tendik_nama">Nama</label>
-                        <input type="text" class="form-control" id="tendik_nama" name="tendik_nama" required>
+                        <input type="text" class="form-control" id="tendik_nama" name="tendik_nama" placeholder="Nama Tendik" required>
                         <small id="error_tendik_nama" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username Tendik" required>
                         <small id="error_username" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password Tendik" required>
                         <small id="error_password" class="error-text form-text text-danger"></small>
                     </div>
                 </div>

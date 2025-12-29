@@ -14,7 +14,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="ruangan_nama">Nama</label>
-                        <input type="text" class="form-control" id="ruangan_nama" name="ruangan_nama" required>
+                        <input type="text" class="form-control" id="ruangan_nama" name="ruangan_nama" placeholder="Nama Ruangan" required>
                         <small id="error_ruangan_nama" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="ruangan_kode">Kode</label>
-                        <input type="text" class="form-control" id="ruangan_kode" name="ruangan_kode" required>
+                        <input type="text" class="form-control" id="ruangan_kode" name="ruangan_kode" placeholder="Kode Ruangan" required>
                         <small id="error_ruangan_kode" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="ruangan_fasilitas">Fasilitas</label>
-                        <textarea class="form-control" id="ruangan_fasilitas" name="ruangan_fasilitas"></textarea>
+                        <textarea class="form-control" id="ruangan_fasilitas" name="ruangan_fasilitas" placeholder="Berbagai fasilitas yang disediakan dalam ruangan"></textarea>
                         <small id="error_ruangan_fasilitas" class="error-text form-text text-danger"></small>
                     </div>
                 </div>

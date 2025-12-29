@@ -14,14 +14,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="dosen_nidn">NIDN</label>
-                        <input type="text" class="form-control" id="dosen_nidn" name="dosen_nidn" required>
+                        <input type="text" class="form-control" id="dosen_nidn" name="dosen_nidn" placeholder="NIDN Dosen" required>
                         <small id="error_dosen_nidn" class="error-text form-text text-danger"></small>
                     </div>
                     
                     <div class="form-group">
-                        <label for="prodi_id">Prodi</label>
+                        <label for="prodi_id">Program Studi</label>
                         <select class="form-control" id="prodi_id" name="prodi_id" required>
-                            <option value="">-- Pilih Prodi --</option>
+                            <option value="">-- Pilih Program Studi --</option>
                             @foreach ($prodiList as $prodi)
                                 <option value="{{ $prodi->prodi_id }}">{{ $prodi->prodi_nama }}</option>
                             @endforeach
@@ -31,7 +31,7 @@
 
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username Dosen" required>
                         <small id="error_username" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -40,19 +40,19 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="dosen_nama">Nama</label>
-                        <input type="text" class="form-control" id="dosen_nama" name="dosen_nama" required>
+                        <input type="text" class="form-control" id="dosen_nama" name="dosen_nama" placeholder="Nama Dosen" required>
                         <small id="error_dosen_nama" class="error-text form-text text-danger"></small>
                     </div>
                     
                     <div class="form-group">
                         <label for="dosen_noHp">No. HP</label>
-                        <input type="text" class="form-control" id="dosen_noHp" name="dosen_noHp" required>
+                        <input type="text" class="form-control" id="dosen_noHp" name="dosen_noHp" placeholder="Nomor Handphone Dosen" required>
                         <small id="error_dosen_noHp" class="error-text form-text text-danger"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password Dosen" required>
                         <small id="error_password" class="error-text form-text text-danger"></small>
                     </div>
                 </div>

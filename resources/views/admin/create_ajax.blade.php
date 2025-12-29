@@ -14,14 +14,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="admin_nidn">NIDN</label>
-                        <input type="text" class="form-control" id="admin_nidn" name="admin_nidn" required>
+                        <input type="text" class="form-control" id="admin_nidn" name="admin_nidn" placeholder="NIDN Admin" required>
                         <small id="error_admin_nidn" class="error-text form-text text-danger"></small>
                     </div>
                     
                     <div class="form-group">
-                        <label for="prodi_id">Prodi</label>
+                        <label for="prodi_id">Program Studi</label>
                         <select class="form-control" id="prodi_id" name="prodi_id" required>
-                            <option value="">-- Pilih Prodi --</option>
+                            <option value="">-- Pilih Program Studi --</option>
                             @foreach ($prodiList as $prodi)
                                 <option value="{{ $prodi->prodi_id }}">{{ $prodi->prodi_nama }}</option>
                             @endforeach
@@ -31,7 +31,7 @@
 
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username Admin" required>
                         <small id="error_username" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
@@ -40,19 +40,19 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="admin_nama">Nama</label>
-                        <input type="text" class="form-control" id="admin_nama" name="admin_nama" required>
+                        <input type="text" class="form-control" id="admin_nama" name="admin_nama" placeholder="Nama Admin" required>
                         <small id="error_admin_nama" class="error-text form-text text-danger"></small>
                     </div>
                     
                     <div class="form-group">
                         <label for="admin_noHp">No. HP</label>
-                        <input type="text" class="form-control" id="admin_noHp" name="admin_noHp" required>
+                        <input type="text" class="form-control" id="admin_noHp" name="admin_noHp" placeholder="Nomor Handphone Admin" required>
                         <small id="error_admin_noHp" class="error-text form-text text-danger"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password Admin" required>
                         <small id="error_password" class="error-text form-text text-danger"></small>
                     </div>
                 </div>
