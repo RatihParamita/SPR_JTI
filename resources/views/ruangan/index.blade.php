@@ -18,11 +18,13 @@
             </div>
             
             {{-- TOMBOL TAMBAH --}}
+            @if(Auth::user()->getRole() == 'ADM')
             <div class="card-tools ml-auto my-1">
                 <button onclick="modalAction('{{ url('/ruangan/create_ajax') }}')" class="btn btn-success btn-sm">
                     <i class="fas fa-plus"></i> Tambah
                 </button>
             </div>
+            @endif
         </div>
     </div>
     <div class="card-body">
@@ -58,12 +60,14 @@
                             <button onclick="modalAction('{{ url('/ruangan/' . $r->ruangan_id . '/show_ajax') }}')" class="btn btn-outline-info btn-sm" title="Detail">
                                 <i class="fas fa-eye"></i>
                             </button>
+                            @if(Auth::user()->getRole() == 'ADM')
                             <button onclick="modalAction('{{ url('/ruangan/' . $r->ruangan_id . '/edit_ajax') }}')" class="btn btn-outline-warning btn-sm" title="Edit">
                                 <i class="fas fa-edit"></i>
                             </button>
                             <button onclick="modalAction('{{ url('/ruangan/' . $r->ruangan_id . '/confirm_ajax') }}')" class="btn btn-outline-danger btn-sm" title="Hapus">
                                 <i class="fas fa-trash"></i>
                             </button>
+                            @endif
                         </div>
                     </td>
                 </tr>

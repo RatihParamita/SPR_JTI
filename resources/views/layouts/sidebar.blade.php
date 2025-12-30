@@ -27,7 +27,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'dashboard') ? 'active' : '' }} ">
+            <a href="{{ url('/dashboard') }}" class="nav-link {{ ($activeMenu == 'dashboard') ? 'active' : '' }} ">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
@@ -70,6 +70,8 @@
               </p>
             </a>
           </li>
+          
+          @if(Auth::user()->getRole() == 'ADM')
           <li class="nav-item">
             <a href="#" class="nav-link {{ $activeMenu == 'user' ? 'active' : '' }}">
               <i class="nav-icon fas fa-users"></i>
@@ -121,8 +123,19 @@
               </p>
             </a>
           </li>
+          @endif
           
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
+    
+<style>
+    /* Custom Sidebar Search Result Color */
+    .sidebar-search-results .list-group-item {
+        background-color: #FFB703 !important;
+    }
+    .sidebar-search-results .list-group-item:hover {
+        font-weight: bold;
+    }
+</style>

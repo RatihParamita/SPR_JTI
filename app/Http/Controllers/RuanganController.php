@@ -37,8 +37,12 @@ class RuanganController extends Controller
                 ->addIndexColumn() 
                 ->addColumn('aksi', function ($ruangan) {
                     $btn = '<button onclick="modalAction(\''.url('/ruangan/' . $ruangan->ruangan_id . '/show_ajax').'\')" class="btn btn-outline-info btn-sm" title="Detail"><i class="fas fa-eye"></i></button>';
-                    $btn .= '<button onclick="modalAction(\''.url('/ruangan/' . $ruangan->ruangan_id . '/edit_ajax').'\')" class="btn btn-outline-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></button>';
-                    $btn .= '<button onclick="modalAction(\''.url('/ruangan/' . $ruangan->ruangan_id . '/confirm_ajax').'\')" class="btn btn-outline-danger btn-sm" title="Hapus"><i class="fas fa-trash"></i></button>';
+                    
+                    if (Auth::user()->getRole() == 'ADM') {
+                        $btn .= ' <button onclick="modalAction(\''.url('/ruangan/' . $ruangan->ruangan_id . '/edit_ajax').'\')" class="btn btn-outline-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></button>';
+                        $btn .= ' <button onclick="modalAction(\''.url('/ruangan/' . $ruangan->ruangan_id . '/confirm_ajax').'\')" class="btn btn-outline-danger btn-sm" title="Hapus"><i class="fas fa-trash"></i></button>';
+                    }
+                    
                     return $btn;
                 })
                 ->rawColumns(['aksi']) 

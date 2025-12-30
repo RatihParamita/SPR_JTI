@@ -26,42 +26,72 @@ use App\Http\Controllers\KelasController;
 Route::pattern('id', '[0-9]+'); //meaning: ketika ada parameter "id" maka nilainya harus angka, yaitu dari 0 sampai 9.
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postLogin']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+// Public Route
+Route::get('/', [WelcomeController::class, 'landing'])->name('landing');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [WelcomeController::class, 'index']);
+    // Dashboard Route
+    Route::get('/dashboard', [WelcomeController::class, 'index'])->name('dashboard');
+    
+    // Profile Routes
+    Route::group(['prefix' => 'profile'], function () {
+        Route::get('/show_ajax', [App\Http\Controllers\ProfileController::class, 'show_ajax']);
+        Route::get('/edit_ajax', [App\Http\Controllers\ProfileController::class, 'edit_ajax']);
+        Route::put('/update_ajax', [App\Http\Controllers\ProfileController::class, 'update_ajax']);
+    });
+    
+    // Formulir Routes
+    Route::group(['prefix' => 'formulir'], function () {
+        Route::post('/upload', [WelcomeController::class, 'uploadFormulir'])->name('formulir.upload')->middleware('authorize:ADM');
+        Route::get('/download', [WelcomeController::class, 'downloadFormulir'])->name('formulir.download')->middleware('authorize:DSN,TDK,MHS');
+    });
 
     Route::group(['prefix' => 'jadwal', 'middleware' => 'authorize:ADM'], function () {
-        Route::get('/', [JadwalController::class, 'index']); //Menampilkan laman awal jadwal
-        Route::post('/list', [JadwalController::class, 'list']); //menampilkan data jadwal dalam bentuk json untuk datatables.
+        // Route::get('/', [JadwalController::class, 'index']); // Removed from here
+        // Route::post('/list', [JadwalController::class, 'list']); // Removed from here
 
-        Route::get('/create_ajax', [JadwalController::class, 'create_ajax']); //Buat data jadwal w ajax
-        Route::post('/ajax', [JadwalController::class, 'store_ajax']); //menyimpan data jadwal baru w ajax
+        Route::get('/create_ajax', [JadwalController::class, 'create_ajax']); 
+        Route::post('/ajax', [JadwalController::class, 'store_ajax']); 
 
+        // Route::get('/{id}/show_ajax', [JadwalController::class, 'show_ajax']); // Moved to shared group
+
+        Route::get('/{id}/edit_ajax', [JadwalController::class, 'edit_ajax']); 
+        Route::put('/{id}/update_ajax', [JadwalController::class, 'update_ajax']); 
+
+        Route::get('/{id}/confirm_ajax', [JadwalController::class, 'confirm_ajax']); 
+        Route::delete('/{id}/delete_ajax', [JadwalController::class, 'delete_ajax']); 
+        // Route::get('/get_kelas_by_prodi/{prodi_id}', [JadwalController::class, 'get_kelas_by_prodi']); // Moved to shared
+    });
+
+    Route::group(['prefix' => 'jadwal', 'middleware' => 'authorize:ADM,DSN,TDK,MHS'], function () {
+        Route::get('/', [JadwalController::class, 'index']); 
+        Route::post('/list', [JadwalController::class, 'list']); 
         Route::get('/{id}/show_ajax', [JadwalController::class, 'show_ajax']);
-
-        Route::get('/{id}/edit_ajax', [JadwalController::class, 'edit_ajax']); //edit data jadwal dengan ajax
-        Route::put('/{id}/update_ajax', [JadwalController::class, 'update_ajax']); //menyimpan perubahan data dengan ajax
-
-        Route::get('/{id}/confirm_ajax', [JadwalController::class, 'confirm_ajax']); //Munculkan pop up konfirmasi delete dengan ajax
-        Route::get('/{id}/confirm_ajax', [JadwalController::class, 'confirm_ajax']); //Munculkan pop up konfirmasi delete dengan ajax
-        Route::delete('/{id}/delete_ajax', [JadwalController::class, 'delete_ajax']); //Menghapus data jadwal dengan ajax
-        Route::get('/get_kelas_by_prodi/{prodi_id}', [JadwalController::class, 'get_kelas_by_prodi']); // Get Kelas by Prodi
+        Route::get('/get_kelas_by_prodi/{prodi_id}', [JadwalController::class, 'get_kelas_by_prodi']); 
     });
 
     Route::group(['prefix' => 'ruangan', 'middleware' => 'authorize:ADM'], function () {
-        Route::get('/', [RuanganController::class, 'index']); //Menampilkan laman awal ruangan
-        Route::post('/list', [RuanganController::class, 'list']); //menampilkan data ruangan dalam bentuk json untuk datatables.
+        // Route::get('/', [RuanganController::class, 'index']); 
+        // Route::post('/list', [RuanganController::class, 'list']); 
 
-        Route::get('/create_ajax', [RuanganController::class, 'create_ajax']); //Buat data ruangan w ajax
-        Route::post('/ajax', [RuanganController::class, 'store_ajax']); //menyimpan data ruangan baru w ajax
+        Route::get('/create_ajax', [RuanganController::class, 'create_ajax']); 
+        Route::post('/ajax', [RuanganController::class, 'store_ajax']); 
 
+        // Route::get('/{id}/show_ajax', [RuanganController::class, 'show_ajax']); 
+
+        Route::get('/{id}/edit_ajax', [RuanganController::class, 'edit_ajax']); 
+        Route::put('/{id}/update_ajax', [RuanganController::class, 'update_ajax']); 
+
+        Route::get('/{id}/confirm_ajax', [RuanganController::class, 'confirm_ajax']); 
+        Route::delete('/{id}/delete_ajax', [RuanganController::class, 'delete_ajax']); 
+    });
+
+    Route::group(['prefix' => 'ruangan', 'middleware' => 'authorize:ADM,DSN,TDK,MHS'], function () {
+        Route::get('/', [RuanganController::class, 'index']); 
+        Route::post('/list', [RuanganController::class, 'list']); 
         Route::get('/{id}/show_ajax', [RuanganController::class, 'show_ajax']);
-
-        Route::get('/{id}/edit_ajax', [RuanganController::class, 'edit_ajax']); //edit data ruangan dengan ajax
-        Route::put('/{id}/update_ajax', [RuanganController::class, 'update_ajax']); //menyimpan perubahan data dengan ajax
-
-        Route::get('/{id}/confirm_ajax', [RuanganController::class, 'confirm_ajax']); //Munculkan pop up konfirmasi delete dengan ajax
-        Route::delete('/{id}/delete_ajax', [RuanganController::class, 'delete_ajax']); //Menghapus data ruangan dengan ajax
     });
 
     Route::group(['prefix' => 'admin', 'middleware' => 'authorize:ADM'], function () {
