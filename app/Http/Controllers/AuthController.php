@@ -11,7 +11,7 @@ class AuthController extends Controller
     {
 //redirect ke home jika sudah login
         if (Auth::check()) {
-            return redirect('/');
+            return redirect('/dashboard');
         }
 
         return view('auth.login');
@@ -33,28 +33,28 @@ class AuthController extends Controller
                         return response()->json([
                             'status' => true,
                             'message' => 'Selamat datang, ' . $nama . '.',
-                            'redirect' => url('/')
+                            'redirect' => url('/dashboard')
                         ]);
                     case 2:
                         $nama = Auth::user()->dosen->dosen_nama;
                         return response()->json([
                             'status' => true,
                             'message' => 'Selamat datang, ' . $nama . '.',
-                            'redirect' => url('/')
+                            'redirect' => url('/dashboard')
                         ]);
                     case 3:
                         $nama = Auth::user()->tendik->tendik_nama;
                         return response()->json([
                             'status' => true,
                             'message' => 'Selamat datang, ' . $nama . '.',
-                            'redirect' => url('/')
+                            'redirect' => url('/dashboard')
                         ]);
                     case 4:
                         $nama = Auth::user()->mahasiswa->mahasiswa_nama;
                         return response()->json([
                             'status' => true,
                             'message' => 'Selamat datang, ' . $nama . '.',
-                            'redirect' => url('/')
+                            'redirect' => url('/dashboard')
                         ]);
                  }
             } else {
@@ -68,11 +68,11 @@ class AuthController extends Controller
         return redirect('login');
     }
 
-    /*public function logout(Request $request)
+    public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('login');
-    }*/
+    }
 }
