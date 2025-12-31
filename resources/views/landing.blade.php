@@ -126,7 +126,7 @@
     </div>
 
     <div class="footer">
-        &copy; 2025 JTI Polinema. All rights reserved.
+        &copy; 2025 Jurusan Teknologi Informasi - Politeknik Negeri Malang. All rights reserved.
     </div>
 
     <!-- jQuery -->
