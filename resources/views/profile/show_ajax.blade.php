@@ -28,7 +28,7 @@
                 </label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-id-card text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_nidn ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_nidn ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_nidn ?? '-' }}
@@ -43,7 +43,7 @@
                 <label class="font-weight-bold">Username</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user text-primary mr-2"></i>
-                    <span>{{ $user->username }}</span>
+                    <span class="text-secondary">{{ $user->username }}</span>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <label class="font-weight-bold">Program Studi</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-swatchbook text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->prodi->prodi_nama ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->prodi->prodi_nama ?? '-' }}
                         @elseif($role == 'TDK') -
@@ -70,7 +70,7 @@
                 <label class="font-weight-bold">No. HP</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-phone text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_noHp ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_noHp ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_noHp ?? '-' }}
@@ -92,7 +92,7 @@
                 </label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-id-card text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_nidn ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_nidn ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_nidn ?? '-' }}
@@ -110,7 +110,7 @@
                 <label class="font-weight-bold">Username</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user text-primary mr-2"></i>
-                    <span>{{ $user->username }}</span>
+                    <span class="text-secondary">{{ $user->username }}</span>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
                 <label class="font-weight-bold">No. HP</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-phone text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_noHp ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_noHp ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_noHp ?? '-' }}
@@ -144,7 +144,7 @@
                 </label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-id-card text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_nidn ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_nidn ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_nidn ?? '-' }}
@@ -159,7 +159,7 @@
                 <label class="font-weight-bold">Username</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-user text-primary mr-2"></i>
-                    <span>{{ $user->username }}</span>
+                    <span class="text-secondary">{{ $user->username }}</span>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
                 <label class="font-weight-bold">Program Studi</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-swatchbook text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->prodi->prodi_nama ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->prodi->prodi_nama ?? '-' }}
                         @elseif($role == 'TDK') -
@@ -186,7 +186,7 @@
                 <label class="font-weight-bold">Kelas</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-book text-primary mr-2"></i>
-                    <span>{{ $data->kelas->kelas_nama ?? '-' }}</span>
+                    <span class="text-secondary">{{ $data->kelas->kelas_nama ?? '-' }}</span>
                 </div>
             </div>
         </div>
@@ -198,7 +198,7 @@
                 <label class="font-weight-bold">No. HP</label>
                 <div class="d-flex align-items-center">
                     <i class="fas fa-phone text-primary mr-2"></i>
-                    <span>
+                    <span class="text-secondary">
                         @if($role == 'ADM') {{ $data->admin_noHp ?? '-' }}
                         @elseif($role == 'DSN') {{ $data->dosen_noHp ?? '-' }}
                         @elseif($role == 'TDK') {{ $data->tendik_noHp ?? '-' }}
