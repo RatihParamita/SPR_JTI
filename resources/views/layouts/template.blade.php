@@ -81,7 +81,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   @stack('css')
 </head>
-<body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -130,6 +130,11 @@
 <script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ asset('adminlte/plugins/chart.js/Chart.min.js') }}"></script>
+<!-- jQuery Validation -->
+<script src="{{ asset('adminlte/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/jquery-validation/additional-methods.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('adminlte/dist/js/adminlte.js?v=3.2.0') }}"></script>
 @stack('js')
