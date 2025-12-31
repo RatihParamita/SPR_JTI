@@ -147,17 +147,17 @@
                     </div>
 
                     {{-- <a class="help-link" href="{{ route('register') }}">Butuh bantuan? <u>Manual</u></a> --}}
-                    {{-- <div class="help-line text-center">
+                    <div class="help-line text-center">
                         <span>Butuh bantuan?</span>
                         <a class="help-link" 
-                            href="{{ asset('manual/Manual%20Sistem%20Peminjaman%20Ruangan%20JTI.pdf') }}" 
+                            href="{{ asset('manuals/User Manual Sistem Peminjaman Ruangan JTI.pdf') }}" 
                             target="_blank" rel="noopener"><b>Manual</b></a>
-                    </div> --}}
-                    <div class="help-line">
+                    </div>
+                    <!--div class="help-line">
                         <span>Butuh bantuan?</span>
                         <a class="help-link">
                             <b>Manual</b></a>
-                    </div>
+                    </div>-->
 
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
