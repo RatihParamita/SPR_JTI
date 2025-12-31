@@ -175,7 +175,7 @@ class WelcomeController extends Controller
 
     public function downloadFormulir()
     {
-        $formulir = DB::table('m_formulir')->orderBy('created_at', 'desc')->first();
+        $formulir = DB::table('m_formulir')->orderBy('formulir_id', 'desc')->first();
 
         if (!$formulir) {
             return back()->with('error', 'Belum ada formulir yang tersedia.');
@@ -187,6 +187,15 @@ class WelcomeController extends Controller
              return back()->with('error', 'File fisik formulir tidak ditemukan.');
         }
 
-        return response()->download($path, 'Formulir Peminjaman Ruangan JTI.pdf');
+        $headers = [
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+            'Pragma' => 'no-cache',
+            'Expires' => '0',
+        ];
+
+        $waktu = date('Y-m-d H:i:s');
+        $namaDownload = 'Formulir JTI Peminjaman Ruangan JTI_' . $waktu . '.pdf';
+
+        return response()->download($path, $namaDownload, $headers);
     }
 }
